@@ -77,30 +77,32 @@ button:focus-visible,.c:focus-visible{outline:3px solid var(--acc1);outline-offs
 .mc.daily.on{border-color:transparent;outline:3px solid var(--ink);outline-offset:2px}.mc.daily.on::after{border-color:#fff;background:radial-gradient(circle,#fff 0 45%,transparent 50%)}
 .sub2{text-wrap:balance}.tag .t2{display:block;white-space:nowrap;font-size:clamp(12px,4.3vw,19px)}#rst:empty{display:none}.hw{font:500 17px/1.4 var(--fb);margin:0}.hw2{font:800 24px var(--fd);margin:18px 0 4px}.mc.daily{margin-bottom:16px}
 @media (max-height:620px){.tag{margin-top:18px}.sub2{margin-top:10px}.mc.daily{padding-top:10px;padding-bottom:10px}}
+.lg{display:flex;justify-content:flex-end}.gl{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:99px;box-shadow:var(--sh);padding:3px 8px 3px 10px}
+.gl select{border:0;background:transparent;font:600 14px var(--fb);color:var(--fg);padding:5px 2px;cursor:pointer}
+#lang2{width:100%;font:600 15px var(--fb);color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;margin:2px 0 0}
+.st-top{padding-top:0}.tag{max-width:none}
 </style></head><body>
 <div id="start"><div class="sin">
+<div class="lg"><label class="gl"><span aria-hidden="true">🌐</span><select id="lang" aria-label="Lingua" data-i18n-aria="optLang"></select></label></div>
 <div class="st-top"><div id="logo" aria-label="Tipdoku"><span class="lt ta" style="--i:0;--r:-4">T</span><span class="lt" style="--c:#FF8A00;--i:1;--r:4">I</span><span class="lt" style="--c:#22B14C;--i:2;--r:-4">P</span><span class="lt td" style="--i:3;--r:4">D</span><span class="lt" style="--c:#00A2E8;--i:4;--r:-4">O</span><span class="lt" style="--c:#E91E8C;--i:5;--r:4">K</span><span class="lt" style="--c:#14b8a6;--i:6;--r:-4">U</span></div>
-<p class="sub2">Un gioco di logica, matematica e velocità</p>
-<p class="tag"><span class="t1">Allena la mente</span><span class="t2">Segui i suggerimenti e riempi lo schema</span></p></div>
-<div class="st-mid"><div class="sl">Seleziona la modalità</div>
-<button class="mc daily on" data-m="daily"><span class="mt">📅 Sfida giornaliera</span><span class="md">Ogni giorno un nuovo doppio schema per sfidare il tempo e chi vuoi tu</span></button>
-<button class="mc" data-m="relax"><span class="mt">🌿 Relax</span><span class="md">Allenati senza limiti</span></button></div>
-<button class="b p" id="play">Gioca</button></div></div>
+<p class="sub2" data-i18n="sub">Un gioco di logica, matematica e velocità</p>
+<p class="tag"><span class="t1" data-i18n="t1">Allena la mente</span><span class="t2" data-i18n="t2">Segui i suggerimenti e riempi lo schema</span></p></div>
+<div class="st-mid"><div class="sl" data-i18n="selMode">Seleziona la modalità</div>
+<button class="mc daily on" data-m="daily"><span class="mt" data-i18n="dailyT">📅 Sfida giornaliera</span><span class="md" data-i18n="dailyD">Ogni giorno un nuovo doppio schema per sfidare il tempo e chi vuoi tu</span></button>
+<button class="mc" data-m="relax"><span class="mt" data-i18n="relaxT">🌿 Relax</span><span class="md" data-i18n="relaxD">Allenati senza limiti</span></button></div>
+<button class="b p" id="play" data-i18n="play">Gioca</button></div></div>
 <main>
-<div id="hdr"><button class="hlogo" id="hl" aria-label="Tipdoku, torna alla home"><span class="ht ta">T</span><span class="ht" style="--c:#FF8A00">I</span><span class="ht" style="--c:#22B14C">P</span><span class="ht td">D</span><span class="ht" style="--c:#00A2E8">O</span><span class="ht" style="--c:#E91E8C">K</span><span class="ht" style="--c:#14b8a6">U</span></button><div id="tm">0:00</div><div class="hr"><button class="q" id="hq" aria-label="Aiuto">?</button><button class="q" id="gr" aria-label="Opzioni"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></button></div></div>
+<div id="hdr"><button class="hlogo" id="hl" aria-label="Tipdoku, torna alla home" data-i18n-aria="homeAria"><span class="ht ta">T</span><span class="ht" style="--c:#FF8A00">I</span><span class="ht" style="--c:#22B14C">P</span><span class="ht td">D</span><span class="ht" style="--c:#00A2E8">O</span><span class="ht" style="--c:#E91E8C">K</span><span class="ht" style="--c:#14b8a6">U</span></button><div id="tm">0:00</div><div class="hr"><button class="q" id="hq" aria-label="Aiuto" data-i18n-aria="helpAria">?</button><button class="q" id="gr" aria-label="Opzioni" data-i18n-aria="optAria"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></button></div></div>
 <div id="lv"></div>
 <div id="wrap"><div id="in" class="hide"><div id="g"></div><ul id="cl"></ul></div>
-<div id="ov"><div style="font:700 20px var(--fd)">Pronto?</div><button class="b p" id="go" style="width:100%">Inizia</button><div id="best" style="color:var(--mut);font-size:13px"></div></div></div>
+<div id="ov"><div style="font:700 20px var(--fd)" data-i18n="ready">Pronto?</div><button class="b p" id="go" data-i18n="start" style="width:100%">Inizia</button><div id="best" style="color:var(--mut);font-size:13px"></div></div></div>
 <div id="msg"></div><div id="pad"></div>
-<div id="act"><button class="b" id="un" aria-label="Indietro di una mossa" style="flex:0 0 54px;font-size:22px">↶</button><button class="b" id="ca">Cancella tutto</button><button class="b" id="nw">Nuova partita</button></div>
+<div id="act"><button class="b" id="un" aria-label="Indietro di una mossa" data-i18n-aria="undoAria" style="flex:0 0 54px;font-size:22px">↶</button><button class="b" id="ca" data-i18n="clearAll">Cancella tutto</button><button class="b" id="nw">Nuova partita</button></div>
 </main>
-<div id="help" onclick="this.classList.remove('on')"><div onclick="event.stopPropagation()">
-<b>Indizi</b>“Subito” = casella adiacente. “Vicino” = si toccano per un lato (non in diagonale). “Più in alto / a sinistra” = riga o colonna precedente, anche lontana.
-<b>Somme</b>Somma di tutti i numeri della zona, riga o colonna indicata (righe A–D dall’alto, colonne X–Z). “Zona A superiore a zona B” confronta le due somme.<b>Più alto / più basso</b>“Ha vicino un numero più alto” = almeno una delle caselle adiacenti (sopra, sotto, destra, sinistra) contiene un numero maggiore. Con “subito a destra / sopra…” conta solo quella casella.
-<b>Caselle con riquadro</b>Numeri già dati.<b>Tocca un indizio</b>per barrarlo.<b>Modalità</b>Relax: cronometro senza limite, schemi sempre nuovi. Sfida giornaliera: due schemi uguali per tutti, validi dalle 00:00 alle 23:59 (ora CET, UTC+1). Alla fine vedi il tempo totale e puoi condividerlo.<button class="b p" id="hc" style="width:100%;margin-top:14px">Chiudi</button></div></div>
-<div id="opt" onclick="this.classList.remove('on')"><div onclick="event.stopPropagation()"><b style="margin-top:0;font-size:17px">Opzioni</b><b>Colori delle zone</b><div class="row" style="margin:6px 0 0"><button class="b" data-p="classic">Classici</button><button class="b" data-p="cvd">Per daltonici</button></div><p style="margin:10px 0 0;color:var(--mut)">La palette per daltonici usa colori più facili da distinguere anche per chi confonde rosso e verde.</p><button class="b p" id="oc" style="width:100%;margin-top:16px">Chiudi</button></div></div>
+<div id="help" onclick="this.classList.remove('on')"><div onclick="event.stopPropagation()"><div id="helpc" data-i18n-html="help"></div><button class="b p" id="hc" data-i18n="close" style="width:100%;margin-top:14px">Chiudi</button></div></div>
+<div id="opt" onclick="this.classList.remove('on')"><div onclick="event.stopPropagation()"><b style="margin-top:0;font-size:17px" data-i18n="optTitle">Opzioni</b><b data-i18n="optColors">Colori delle zone</b><div class="row" style="margin:6px 0 0"><button class="b" data-p="classic" data-i18n="palClassic">Classici</button><button class="b" data-p="cvd" data-i18n="palCvd">Per daltonici</button></div><p data-i18n="optCvdNote" style="margin:10px 0 0;color:var(--mut)">La palette per daltonici usa colori più facili da distinguere anche per chi confonde rosso e verde.</p><b data-i18n="optLang">Lingua</b><select id="lang2"></select><button class="b p" id="oc" data-i18n="close" style="width:100%;margin-top:16px">Chiudi</button></div></div>
 <div id="rs"><div><h2 id="rst"></h2><div id="rsb"></div><div class="row" id="rsr"></div></div></div>
-<div id="cf"><div><p id="cft" style="font:600 17px/1.35 var(--fd);margin:0 0 16px;text-align:center"></p><div class="row"><button class="b" id="cfn">Annulla</button><button class="b p" id="cfy">Conferma</button></div></div></div>
+<div id="cf"><div><p id="cft" style="font:600 17px/1.35 var(--fd);margin:0 0 16px;text-align:center"></p><div class="row"><button class="b" id="cfn" data-i18n="cancel">Annulla</button><button class="b p" id="cfy" data-i18n="confirm">Conferma</button></div></div></div>
 <script>
 const TG=(()=>{
 const N=12,ZS="RRYRYYGBBGGB",ZL=["R","Y","G","B"],ALL=(1<<N)-1;
@@ -199,21 +201,35 @@ function setPal(n){palName=n;ZC=PAL[n];try{localStorage.setItem("pal",n)}catch(e
 let mode="relax",streak=0,queue={},P,v,fix,sel=-1,t0=0,tm=null,run=false,dStep=0,dDay=0,rsTimer=null;
 const $=id=>document.getElementById(id),g=$("g"),pad=$("pad"),msg=$("msg");
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,x){try{localStorage.setItem(k,x)}catch(e){}}};
+const I18N={"it":{"name":"Italiano","locale":"it-IT","sub":"Un gioco di logica, matematica e velocità","t1":"Allena la mente","t2":"Segui i suggerimenti e riempi lo schema","selMode":"Seleziona la modalità","dailyT":"📅 Sfida giornaliera","dailyD":"Ogni giorno un nuovo doppio schema per sfidare il tempo e chi vuoi tu","relaxT":"🌿 Relax","relaxD":"Allenati senza limiti","play":"Gioca","homeAria":"Tipdoku, torna alla home","helpAria":"Aiuto","optAria":"Opzioni","undoAria":"Indietro di una mossa","ready":"Pronto?","start":"Inizia","clearAll":"Cancella tutto","newGame":"Nuova partita","nextBtn":"Prossima","close":"Chiudi","optTitle":"Opzioni","optColors":"Colori delle zone","palClassic":"Classici","palCvd":"Per daltonici","optCvdNote":"La palette per daltonici usa colori più facili da distinguere anche per chi confonde rosso e verde.","optLang":"Lingua","cancel":"Annulla","confirm":"Conferma","help":"<b>Indizi</b>“Subito” = casella adiacente. “Vicino” = si toccano per un lato (non in diagonale). “Più in alto / a sinistra” = riga o colonna precedente, anche lontana.<b>Somme</b>Somma di tutti i numeri della zona, riga o colonna indicata (righe A–D dall’alto, colonne X–Z). “Zona A superiore a zona B” confronta le due somme.<b>Più alto / più basso</b>“Ha vicino un numero più alto” = almeno una delle caselle adiacenti (sopra, sotto, destra, sinistra) contiene un numero maggiore. Con “subito a destra / sopra…” conta solo quella casella.<b>Caselle con riquadro</b>Numeri già dati.<b>Tocca un indizio</b>per barrarlo.<b>Modalità</b>Relax: cronometro senza limite, schemi sempre nuovi. Sfida giornaliera: due schemi uguali per tutti, validi dalle 00:00 alle 23:59 (ora CET, UTC+1). Alla fine vedi il tempo totale e puoi condividerlo.","labDaily":"Sfida giornaliera · schema {n}/2","labRelax":"Relax","record":"Record: {t}","wrong":"Qualcosa non torna…","doneIn":"Completato in {t}!","newRec":" Record 🏆","dailyDoneMsg":"Completato in {t}","askClear":"Vuoi cancellare tutti i numeri che hai inserito?","askNew":"Vuoi lasciare questo schema e iniziarne uno nuovo?","askHome":"Vuoi tornare alla home? La partita in corso andrà persa.","cellAria":"Casella {r}-{c}","cellNum":", numero {n}","cellEmpty":", vuota","cellGiven":", dato","delAria":"Cancella questo numero","cl_AH":"{a} è subito a sinistra di {b}","cl_AHr":"{b} è subito a destra di {a}","cl_AV":"{a} è subito sopra {b}","cl_AVr":"{b} è subito sotto {a}","cl_UP":"{a} è più in alto di {b}","cl_UPr":"{b} è più in basso di {a}","cl_LF":"{a} è più a sinistra di {b}","cl_LFr":"{b} è più a destra di {a}","cl_Z":"{a} è nella zona {z}","cl_NZ":"{a} non è nella zona {z}","cl_RW":"{a} è nella riga {r}","cl_CL":"{a} è nella colonna {c}","cl_A":"{a} è vicino a {b}","cl_SZ":"{a} è nella stessa zona di {b}","cl_NSZ":"{a} non è nella stessa zona di {b}","sumZone":"Somma zona {z} = {n}","sumRow":"Somma riga {r} = {n}","sumCol":"Somma colonna {c} = {n}","sgt":"Somma zona {x} è superiore a zona {y}","sgtr":"Somma zona {y} è inferiore a zona {x}","nh_any_hi":"{a} ha vicino un numero più alto","nh_any_lo":"{a} ha vicino un numero più basso","nh_R_hi":"{a} ha subito a destra un numero più alto","nh_R_lo":"{a} ha subito a destra un numero più basso","nh_L_hi":"{a} ha subito a sinistra un numero più alto","nh_L_lo":"{a} ha subito a sinistra un numero più basso","nh_U_hi":"{a} ha subito sopra un numero più alto","nh_U_lo":"{a} ha subito sopra un numero più basso","nh_D_hi":"{a} ha subito sotto un numero più alto","nh_D_lo":"{a} ha subito sotto un numero più basso","zones":{"classic":{"R":"Rossa","Y":"Azzurra","G":"Verde","B":"Gialla"},"cvd":{"R":"Rosa","Y":"Arancio","G":"Verde","B":"Gialla"}},"howTxt":"Segui i suggerimenti e riempi lo schema con i numeri. Tocca i suggerimenti per barrarli","howReady":"Pronti, attenti…","howGo":"Via!","step1T":"Schema 1 completato! 🎉","step1Time":"Il tuo tempo nel primo schema.","step1Go":"Vai al secondo step e completa la sfida.","toStep2":"Vai al secondo schema","finalT":"Sfida completata! 🏆","finalDoneT":"Sfida di oggi già completata","p1":"Schema 1","p2":"Schema 2","total":"TOTALE","nextIn":"Nuova sfida tra {t}","share":"Condividi","shareText":"Tipdoku · Sfida del {d}\nSchema 1: {a}\nSchema 2: {b}\nTotale: {c}\nRiesci a battermi? {u}","copied":"Testo copiato negli appunti. ","imgDl":"Immagine scaricata.","noShare":"Condivisione non disponibile su questo dispositivo.","cardTitle":"Sfida giornaliera","cardCta":"Riesci a battermi?"},"en":{"name":"English","locale":"en-GB","sub":"A game of logic, math and speed","t1":"Train your mind","t2":"Follow the clues and fill the grid","selMode":"Select a mode","dailyT":"📅 Daily challenge","dailyD":"Every day a new double puzzle to race the clock and anyone you choose","relaxT":"🌿 Relax","relaxD":"Train without limits","play":"Play","homeAria":"Tipdoku, back to home","helpAria":"Help","optAria":"Options","undoAria":"Undo last move","ready":"Ready?","start":"Start","clearAll":"Clear all","newGame":"New game","nextBtn":"Next","close":"Close","optTitle":"Options","optColors":"Zone colors","palClassic":"Classic","palCvd":"Color-blind friendly","optCvdNote":"The color-blind palette uses colors that are easier to tell apart, even if you confuse red and green.","optLang":"Language","cancel":"Cancel","confirm":"Confirm","help":"<b>Clues</b>“Immediately” = the adjacent cell. “Next to” = they touch along a side (not diagonally). “Higher up / further left” = an earlier row or column, even if far away.<b>Sums</b>Sum of all the numbers in the zone, row or column shown (rows A–D from the top, columns X–Z). “Zone A greater than zone B” compares the two sums.<b>Higher / lower number</b>“Has a higher number next to it” = at least one adjacent cell (above, below, left, right) holds a bigger number. With “immediately to the right / above…” only that cell counts.<b>Boxed cells</b>Numbers already given.<b>Tap a clue</b>to cross it out.<b>Modes</b>Relax: unlimited timer, always new puzzles. Daily challenge: two puzzles, the same for everyone, valid from 00:00 to 23:59 (CET, UTC+1). At the end you see your total time and can share it.","labDaily":"Daily challenge · puzzle {n}/2","labRelax":"Relax","record":"Record: {t}","wrong":"Something's not right…","doneIn":"Completed in {t}!","newRec":" New record 🏆","dailyDoneMsg":"Completed in {t}","askClear":"Do you want to clear all the numbers you entered?","askNew":"Do you want to leave this puzzle and start a new one?","askHome":"Go back to the home screen? The game in progress will be lost.","cellAria":"Cell {r}-{c}","cellNum":", number {n}","cellEmpty":", empty","cellGiven":", given","delAria":"Clear this number","cl_AH":"{a} is immediately left of {b}","cl_AHr":"{b} is immediately right of {a}","cl_AV":"{a} is immediately above {b}","cl_AVr":"{b} is immediately below {a}","cl_UP":"{a} is higher up than {b}","cl_UPr":"{b} is lower down than {a}","cl_LF":"{a} is further left than {b}","cl_LFr":"{b} is further right than {a}","cl_Z":"{a} is in the {z} zone","cl_NZ":"{a} is not in the {z} zone","cl_RW":"{a} is in row {r}","cl_CL":"{a} is in column {c}","cl_A":"{a} is next to {b}","cl_SZ":"{a} is in the same zone as {b}","cl_NSZ":"{a} is not in the same zone as {b}","sumZone":"Sum of zone {z} = {n}","sumRow":"Sum of row {r} = {n}","sumCol":"Sum of column {c} = {n}","sgt":"Sum of zone {x} is greater than zone {y}","sgtr":"Sum of zone {y} is less than zone {x}","nh_any_hi":"{a} has a higher number next to it","nh_any_lo":"{a} has a lower number next to it","nh_R_hi":"{a} has a higher number immediately to its right","nh_R_lo":"{a} has a lower number immediately to its right","nh_L_hi":"{a} has a higher number immediately to its left","nh_L_lo":"{a} has a lower number immediately to its left","nh_U_hi":"{a} has a higher number immediately above it","nh_U_lo":"{a} has a lower number immediately above it","nh_D_hi":"{a} has a higher number immediately below it","nh_D_lo":"{a} has a lower number immediately below it","zones":{"classic":{"R":"Red","Y":"Blue","G":"Green","B":"Yellow"},"cvd":{"R":"Pink","Y":"Orange","G":"Green","B":"Yellow"}},"howTxt":"Follow the clues and fill the grid with the numbers. Tap a clue to cross it out","howReady":"Ready, set…","howGo":"Go!","step1T":"Puzzle 1 complete! 🎉","step1Time":"Your time on the first puzzle.","step1Go":"Go to the second step and complete the challenge.","toStep2":"Go to the second puzzle","finalT":"Challenge complete! 🏆","finalDoneT":"Today's challenge already completed","p1":"Puzzle 1","p2":"Puzzle 2","total":"TOTAL","nextIn":"Next challenge in {t}","share":"Share","shareText":"Tipdoku · Challenge of {d}\nPuzzle 1: {a}\nPuzzle 2: {b}\nTotal: {c}\nCan you beat me? {u}","copied":"Text copied to the clipboard. ","imgDl":"Image downloaded.","noShare":"Sharing is not available on this device.","cardTitle":"Daily challenge","cardCta":"Can you beat me?"}};
+function detectLang(){let sv=null;try{sv=localStorage.getItem("lang")}catch(e){}if(sv&&I18N[sv])return sv;
+ const ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"en"];
+ for(const l of ls){const k=String(l).toLowerCase().split("-")[0];if(I18N[k])return k}return"en"}
+let lang=detectLang();
+const t=(k,v)=>{let r=(I18N[lang]&&I18N[lang][k])!==undefined?I18N[lang][k]:(I18N.en[k]!==undefined?I18N.en[k]:k);if(v)for(const x in v)r=r.split("{"+x+"}").join(v[x]);return r};
+let nwNext=false;function setNw(){$("nw").textContent=t(nwNext?"nextBtn":"newGame")}
+function applyLang(){document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=t(e.dataset.i18n));
+ document.querySelectorAll("[data-i18n-html]").forEach(e=>e.innerHTML=t(e.dataset.i18nHtml));
+ document.querySelectorAll("[data-i18n-aria]").forEach(e=>e.setAttribute("aria-label",t(e.dataset.i18nAria)));
+ ["lang","lang2"].forEach(id=>{const e=$(id);if(e)e.value=lang});setNw();if(typeof P!=="undefined"&&P){lab();clues();draw()}}
+function setLang(k){lang=k;try{localStorage.setItem("lang",k)}catch(e){}applyLang();fit()}
+function buildLangSelects(){["lang","lang2"].forEach(id=>{const e=$(id);e.innerHTML=Object.keys(I18N).map(k=>'<option value="'+k+'">'+I18N[k].name+"</option>").join("");e.onchange=()=>setLang(e.value)})}
 const fmt=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
 for(let n=1;n<=12;n++){const b=document.createElement("button");b.textContent=n;b.onclick=()=>put(n);pad.appendChild(b)}
 let sm="relax";document.querySelectorAll(".mc").forEach(b=>b.onclick=()=>{sm=b.dataset.m;document.querySelectorAll(".mc").forEach(x=>x.classList.toggle("on",x==b))});
 $("play").onclick=()=>{mode=sm;streak=0;if(mode=="daily"){dDay=dayNo();const r=dRec(dDay);if(r.t.length>=2){showFinal(r.t,dDay,true);return}dStep=r.t.length}load();$("start").classList.add("off");$("ov").className="off";showHow()};
-$("hl").onclick=()=>{const go=()=>{clearInterval(tm);run=false;streak=0;$("start").classList.remove("off");fit()};if(run)ask("Vuoi tornare alla home? La partita in corso andrà persa.",go);else go()};
+$("hl").onclick=()=>{const go=()=>{clearInterval(tm);run=false;streak=0;$("start").classList.remove("off");fit()};if(run)ask(t("askHome"),go);else go()};
 $("gr").onclick=()=>$("opt").classList.add("on");$("oc").onclick=()=>$("opt").classList.remove("on");
 $("hq").onclick=()=>$("help").classList.add("on");
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
 function pcode(p){if(p.code)return p.code;let h=2166136261;const t=JSON.stringify([p.sol,p.giv,p.cl]);for(let i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)>>>0}return p.code=String(1000+h%9000)}
-function lab(){const bk=store.get("best_relax");$("best").textContent=mode=="relax"&&bk?"Record: "+fmt(+bk):"";
- $("lv").innerHTML="<span>"+(mode=="daily"?"Sfida giornaliera · schema "+(dStep+1)+"/2":"Relax")+"</span><span class=sc>#"+pcode(P)+"</span>"}
+function lab(){const bk=store.get("best_relax");$("best").textContent=mode=="relax"&&bk?t("record",{t:fmt(+bk)}):"";
+ $("lv").innerHTML="<span>"+(mode=="daily"?t("labDaily",{n:dStep+1}):t("labRelax"))+"</span><span class=sc>#"+pcode(P)+"</span>"}
 let failed=false;const seenSeeds=new Set((()=>{try{return JSON.parse(localStorage.getItem("seen")||"[]")}catch(e){return[]}})());
 function newPuzzle(){for(let tries=0;tries<50;tries++){let s,g=0;do{s=1000+Math.random()*9000|0;g++}while(seenSeeds.has(s)&&g<400);
  seenSeeds.add(s);if(seenSeeds.size>6000)seenSeeds.clear();try{localStorage.setItem("seen",JSON.stringify([...seenSeeds].slice(-500)))}catch(e){}const q=TG.gen(s);if(q)return q}}
-function load(same){if(mode=="daily")P=dailyPuzzle();else if(!same||!P)P=newPuzzle();hist=[];failed=false;$("nw").textContent="Nuova partita";$("nw").style.display=mode=="daily"?"none":"";
+function load(same){if(mode=="daily")P=dailyPuzzle();else if(!same||!P)P=newPuzzle();hist=[];failed=false;nwNext=false;setNw();$("nw").style.display=mode=="daily"?"none":"";
  v=Array(12).fill(0);fix=Array(12).fill(false);P.giv.forEach(n=>{const c=P.sol[n-1];v[c]=n;fix[c]=true});sel=-1;msg.textContent="";clearInterval(tm);run=false;$("tm").textContent="0:00";$("tm").style.color="";
  $("in").className="hide";$("ov").className="";lab();build();clues();fit()}
 function tint(h,a){const n=parseInt(h.slice(1),16);return"rgba("+(n>>16)+","+(n>>8&255)+","+(n&255)+","+a+")"}
@@ -235,21 +251,21 @@ function fit(){const K=Math.max(1,Math.min(2.2,Math.min(innerWidth/460,innerHeig
 addEventListener("resize",fit);
 let hist=[];function snap(){hist.push(v.slice());if(hist.length>300)hist.shift()}
 function delAt(i){if(!run||fix[i]||!v[i])return;snap();v[i]=0;msg.textContent="";draw()}
-function draw(){for(let i=0;i<12;i++){const e=$("c"+i);e.textContent=v[i]||"";e.classList.toggle("sel",i==sel);e.setAttribute("aria-label","Casella "+"ABCD"[Math.floor(i/3)]+"-"+"XYZ"[i%3]+(v[i]?", numero "+v[i]:", vuota")+(fix[i]?", dato":""));
- if(i==sel&&v[i]&&!fix[i]&&run){const x=document.createElement("span");x.className="xb";x.textContent="✕";x.setAttribute("aria-label","Cancella questo numero");x.onclick=ev=>{ev.stopPropagation();delAt(i)};e.appendChild(x)}}
+function draw(){for(let i=0;i<12;i++){const e=$("c"+i);e.textContent=v[i]||"";e.classList.toggle("sel",i==sel);e.setAttribute("aria-label",t("cellAria",{r:"ABCD"[Math.floor(i/3)],c:"XYZ"[i%3]})+(v[i]?t("cellNum",{n:v[i]}):t("cellEmpty"))+(fix[i]?t("cellGiven"):""));
+ if(i==sel&&v[i]&&!fix[i]&&run){const x=document.createElement("span");x.className="xb";x.textContent="✕";x.setAttribute("aria-label",t("delAria"));x.onclick=ev=>{ev.stopPropagation();delAt(i)};e.appendChild(x)}}
  $("un").style.opacity=run&&hist.length?1:.35;
  const u=new Set(v);[...pad.children].forEach((b,k)=>{const f=run&&u.has(k+1);b.classList.toggle("u",f);b.disabled=f})}
 function put(n){if(!run||v.includes(n))return;if(sel<0){const e=v.findIndex((x,i)=>!x&&!fix[i]);if(e<0)return;sel=e}snap();
  v[sel]=n;msg.textContent="";draw();if(v.every(x=>x))finish()}
 function finish(){const bad=[];v.forEach((x,i)=>{if(x!=P.sol.indexOf(i)+1)bad.push(i)});
- if(bad.length){msg.textContent="Qualcosa non torna…";bad.forEach(i=>{if(!fix[i])$("c"+i).classList.add("bad")});setTimeout(()=>bad.forEach(i=>$("c"+i).classList.remove("bad")),1300);return}
+ if(bad.length){msg.textContent=t("wrong");bad.forEach(i=>{if(!fix[i])$("c"+i).classList.add("bad")});setTimeout(()=>bad.forEach(i=>$("c"+i).classList.remove("bad")),1300);return}
  clearInterval(tm);run=false;const s=(Date.now()-t0)/1000;
- if(mode=="daily"){sel=-1;draw();msg.textContent="Completato in "+fmtT(s);dailyDone(s);return}
- const b=+store.get("best_relax")||1e9;let t="Completato in "+fmt(s)+"!";if(s<b){store.set("best_relax",Math.round(s));t+=" Record 🏆"}
- msg.textContent=t;sel=-1;draw();lab();$("nw").textContent="Prossima"}
+ if(mode=="daily"){sel=-1;draw();msg.textContent=t("dailyDoneMsg",{t:fmtT(s)});dailyDone(s);return}
+ const b=+store.get("best_relax")||1e9;let tx=t("doneIn",{t:fmt(s)});if(s<b){store.set("best_relax",Math.round(s));tx+=t("newRec")}
+ msg.textContent=tx;sel=-1;draw();lab();nwNext=true;setNw()}
 $("un").onclick=()=>{if(!run||!hist.length)return;v=hist.pop();msg.textContent="";draw()};function ask(t,fn){$("cft").textContent=t;$("cf").classList.add("on");$("cfn").onclick=()=>$("cf").classList.remove("on");$("cfy").onclick=()=>{$("cf").classList.remove("on");fn()}}
-$("ca").onclick=()=>{if(!run||!v.some((x,i)=>x&&!fix[i]))return;ask("Vuoi cancellare tutti i numeri che hai inserito?",()=>{snap();v=v.map((x,i)=>fix[i]?x:0);sel=-1;msg.textContent="";draw()})};
-$("nw").onclick=()=>{if(run)ask("Vuoi lasciare questo schema e iniziarne uno nuovo?",()=>load());else load()};
+$("ca").onclick=()=>{if(!run||!v.some((x,i)=>x&&!fix[i]))return;ask(t("askClear"),()=>{snap();v=v.map((x,i)=>fix[i]?x:0);sel=-1;msg.textContent="";draw()})};
+$("nw").onclick=()=>{if(run)ask(t("askNew"),()=>load());else load()};
 $("hc").onclick=()=>$("help").classList.remove("on");
 $("go").onclick=()=>{$("ov").className="off";$("in").className="";run=true;draw();t0=Date.now();clearInterval(tm);tm=setInterval(()=>{$("tm").textContent=fmt((Date.now()-t0)/1000)},250)};
 document.addEventListener("keydown",e=>{
@@ -262,23 +278,14 @@ document.addEventListener("keydown",e=>{
  if(sel<0)return;
  if(e.key=="Backspace"||e.key=="Delete")delAt(sel);
  else if(/^\d$/.test(e.key)){window._k=(window._k||"")+e.key;let n=+window._k;if(n>12){window._k=e.key;n=+e.key}clearTimeout(window._kt);window._kt=setTimeout(()=>{window._k=""},600);if(n>=1&&n<=12)put(n)}});
-function clues(){const ul=$("cl");ul.innerHTML="";P.cl.forEach((c,k)=>{const li=document.createElement("li"),b=x=>"<b>"+x+"</b>",rb=r=>"<span class=\"bd sm\">"+"ABCD"[r]+"</span>",cb=c=>"<span class=bw><span class=\"bc sm\">"+"XYZ"[c]+"</span></span>",t=c[0],rv=k%2==1;
- const zc=z=>"<span class=z style=\"background:"+ZC[z][0]+";color:"+ZC[z][1]+"\">"+ZC[z][2]+"</span>";let h;
- if(t=="SUM"){const [kd,key]=c[1].split(":");h="Somma "+(kd=="z"?"zona "+zc(key):kd=="r"?"riga "+rb(+key):"colonna "+cb(+key))+" = "+b(c[2])}
- else if(t=="SGT"){const x=c[1].split(":")[1],y=c[2].split(":")[1];h=rv?"Somma zona "+zc(y)+" è inferiore a zona "+zc(x):"Somma zona "+zc(x)+" è superiore a zona "+zc(y)}
- else if(t=="NH"){const D={any:"ha vicino",R:"ha subito a destra",L:"ha subito a sinistra",U:"ha subito sopra",D:"ha subito sotto"};h=b(c[1])+" "+D[c[2]]+" un numero "+(c[3]=="hi"?"più alto":"più basso")}
- else{const a=b(c[1]),Bn=b(c[2]);
- if(t=="Z")h=a+" è nella zona "+zc(c[2]);
- else if(t=="NZ")h=a+" non è nella zona "+zc(c[2]);
- else if(t=="RW")h=a+" è nella riga "+rb(c[2]);
- else if(t=="CL")h=a+" è nella colonna "+cb(c[2]);
- else if(t=="A")h=a+" è vicino a "+Bn;
- else if(t=="SZ")h=a+" è nella stessa zona di "+Bn;
- else if(t=="NSZ")h=a+" non è nella stessa zona di "+Bn;
- else if(t=="AH")h=rv?Bn+" è subito a destra di "+a:a+" è subito a sinistra di "+Bn;
- else if(t=="AV")h=rv?Bn+" è subito sotto "+a:a+" è subito sopra "+Bn;
- else if(t=="UP")h=rv?Bn+" è più in basso di "+a:a+" è più in alto di "+Bn;
- else h=rv?Bn+" è più a destra di "+a:a+" è più a sinistra di "+Bn}
+function clues(){const ul=$("cl");ul.innerHTML="";P.cl.forEach((c,k)=>{const li=document.createElement("li"),b=x=>"<b>"+x+"</b>",rb=r=>'<span class="bd sm">'+"ABCD"[r]+"</span>",cb=q=>'<span class=bw><span class="bc sm">'+"XYZ"[q]+"</span></span>",tp=c[0],rv=k%2==1;
+ const zc=z=>'<span class=z style="background:'+ZC[z][0]+";color:"+ZC[z][1]+'">'+I18N[lang].zones[palName][z]+"</span>";let h;
+ if(tp=="SUM"){const[kd,key]=c[1].split(":");h=kd=="z"?t("sumZone",{z:zc(key),n:b(c[2])}):kd=="r"?t("sumRow",{r:rb(+key),n:b(c[2])}):t("sumCol",{c:cb(+key),n:b(c[2])})}
+ else if(tp=="SGT"){const x=c[1].split(":")[1],y=c[2].split(":")[1];h=t(rv?"sgtr":"sgt",{x:zc(x),y:zc(y)})}
+ else if(tp=="NH")h=t("nh_"+c[2]+"_"+c[3],{a:b(c[1])});
+ else{const a=b(c[1]),B=b(c[2]);
+  if(tp=="Z")h=t("cl_Z",{a:a,z:zc(c[2])});else if(tp=="NZ")h=t("cl_NZ",{a:a,z:zc(c[2])});else if(tp=="RW")h=t("cl_RW",{a:a,r:rb(c[2])});else if(tp=="CL")h=t("cl_CL",{a:a,c:cb(c[2])});
+  else h=t("cl_"+tp+(rv&&["AH","AV","UP","LF"].includes(tp)?"r":""),{a:a,b:B})}
  li.innerHTML="<span>"+h+"</span>";li.onclick=()=>li.classList.toggle("d");ul.appendChild(li)})}
 const DAY=864e5,CET=36e5;
 function dayNo(ms=Date.now()){return Math.floor((ms+CET)/DAY)}
@@ -287,18 +294,18 @@ function dailySeeds(d){const h1=Math.imul(d^0x9E3779B9,2654435761)>>>0,h2=Math.i
 function dailyPuzzle(){return TG.gen(dailySeeds(dDay)[dStep])}
 const fmtT=s=>{s=Math.round(s*10)/10;const m=Math.floor(s/60);return m+":"+(s-m*60).toFixed(1).padStart(4,"0")};
 function dRec(d){try{const r=JSON.parse(store.get("daily_"+d));return r&&Array.isArray(r.t)?r:{t:[]}}catch(e){return{t:[]}}}
-function dateLabel(d){return new Date(d*DAY).toLocaleDateString("it-IT",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
+function dateLabel(d){return new Date(d*DAY).toLocaleDateString((I18N[lang]||I18N.en).locale,{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
 function nextIn(d){const ms=Math.max(0,(d+1)*DAY-CET-Date.now());return[Math.floor(ms/36e5),Math.floor(ms%36e5/6e4),Math.floor(ms%6e4/1e3)].map(x=>String(x).padStart(2,"0")).join(":")}
-function showHow(){rsOpen("","<p class=hw>Segui i suggerimenti e riempi lo schema con i numeri. Tocca i suggerimenti per barrarli</p><div class=hw2>Pronti, attenti…</div>",[["Via!","p",()=>{rsClose();$("go").click()}]]);const b=$("rsr").querySelector(".b");if(b)b.focus({preventScroll:true})}
+function showHow(){rsOpen("","<p class=hw>"+t("howTxt")+"</p><div class=hw2>"+t("howReady")+"</div>",[[t("howGo"),"p",()=>{rsClose();$("go").click()}]]);const b=$("rsr").querySelector(".b");if(b)b.focus({preventScroll:true})}
 function goHome(){clearInterval(tm);run=false;streak=0;$("start").classList.remove("off");fit()}
 function rsOpen(title,body,btns){$("rst").innerHTML=title;$("rsb").innerHTML=body;const row=$("rsr");row.innerHTML="";btns.forEach(([t,cls,fn])=>{const b=document.createElement("button");b.className="b "+cls;b.textContent=t;b.onclick=fn;row.appendChild(b)});$("rs").classList.add("on")}
 function rsClose(){$("rs").classList.remove("on");clearInterval(rsTimer)}
 function dailyDone(s){const r=dRec(dDay);r.t[dStep]=Math.round(s*10)/10;store.set("daily_"+dDay,JSON.stringify(r));if(dStep==0)showStep1(r.t[0]);else showFinal(r.t,dDay,false)}
-function showStep1(t){rsOpen("Schema 1 completato! 🎉","<div class=tt>"+fmtT(t)+"</div><p class=rp>Il tuo tempo nel primo schema.<br><b>Vai al secondo step e completa la sfida.</b></p>",[["Vai al secondo schema","p",()=>{rsClose();dStep=1;load()}]])}
-function showFinal(t,d,already){const tot=Math.round((t[0]+t[1])*10)/10;
- rsOpen(already?"Sfida di oggi già completata":"Sfida completata! 🏆","<div class=tl><span>Schema 1</span><b>"+fmtT(t[0])+"</b></div><div class=tl><span>Schema 2</span><b>"+fmtT(t[1])+"</b></div><div class=tc>TOTALE</div><div class=tt>"+fmtT(tot)+"</div><p class=rp id=rsn></p><p class=rp id=rsm></p>",[["Condividi","p",()=>shareResult(t,d)],["Chiudi","",()=>{rsClose();goHome()}]]);
- const tick=()=>{const e=$("rsn");if(e)e.textContent="Nuova sfida tra "+nextIn(d)};tick();clearInterval(rsTimer);rsTimer=setInterval(tick,1000)}
-function drawCard(t,d,tot){const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+function showStep1(tm1){rsOpen(t("step1T"),"<div class=tt>"+fmtT(tm1)+"</div><p class=rp>"+t("step1Time")+"<br><b>"+t("step1Go")+"</b></p>",[[t("toStep2"),"p",()=>{rsClose();dStep=1;load()}]])}
+function showFinal(tt,d,already){const tot=Math.round((tt[0]+tt[1])*10)/10;
+ rsOpen(t(already?"finalDoneT":"finalT"),"<div class=tl><span>"+t("p1")+"</span><b>"+fmtT(tt[0])+"</b></div><div class=tl><span>"+t("p2")+"</span><b>"+fmtT(tt[1])+"</b></div><div class=tc>"+t("total")+"</div><div class=tt>"+fmtT(tot)+"</div><p class=rp id=rsn></p><p class=rp id=rsm></p>",[[t("share"),"p",()=>shareResult(tt,d)],[t("close"),"",()=>{rsClose();goHome()}]]);
+ const tick=()=>{const e=$("rsn");if(e)e.textContent=t("nextIn",{t:nextIn(d)})};tick();clearInterval(rsTimer);rsTimer=setInterval(tick,1000)}
+function drawCard(tt,d,tot){const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
  const gr=x.createLinearGradient(0,0,0,H);gr.addColorStop(0,"#fbf7f0");gr.addColorStop(1,"#e9e3d6");x.fillStyle=gr;x.fillRect(0,0,W,H);
  [[130,120,"rgba(235,85,96,.3)"],[960,160,"rgba(47,174,232,.3)"],[110,1230,"rgba(52,189,104,.3)"],[980,1250,"rgba(255,233,74,.45)"]].forEach(([cx,cy,col])=>{const g2=x.createRadialGradient(cx,cy,0,cx,cy,520);g2.addColorStop(0,col);g2.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g2;x.fillRect(0,0,W,H)});
  const rr=(a,b,w,h,r)=>{x.beginPath();x.roundRect?x.roundRect(a,b,w,h,r):x.rect(a,b,w,h)};
@@ -308,21 +315,22 @@ function drawCard(t,d,tot){const W=1080,H=1350,c=document.createElement("canvas"
   else if(i==3){x.beginPath();x.moveTo(px,y0);x.lineTo(px+S*.655,y0);x.lineTo(px+S,y0+S/2);x.lineTo(px+S*.655,y0+S);x.lineTo(px,y0+S);x.closePath()}
   else rr(px,y0,S,S,22);
   x.fill();x.fillStyle="#fff";x.font="800 66px Outfit,system-ui,sans-serif";x.fillText(L[i],px+S/2-(i==3?S*.08:0),y0+S/2-(i==0?S*.08:0)+3)}
- x.fillStyle="#16161a";x.font="800 72px Outfit,system-ui,sans-serif";x.fillText("Sfida giornaliera",W/2,320);
+ x.fillStyle="#16161a";x.font="800 72px Outfit,system-ui,sans-serif";x.fillText(t("cardTitle"),W/2,320);
  x.fillStyle="#6d6b73";x.font="500 44px Inter,system-ui,sans-serif";x.fillText(dateLabel(d),W/2,392);
  const row=(label,val,y)=>{x.fillStyle="rgba(255,255,255,.85)";rr(120,y,W-240,130,30);x.fill();x.fillStyle="#16161a";x.textAlign="left";x.font="600 48px Inter,system-ui,sans-serif";x.fillText(label,170,y+65);x.textAlign="right";x.font="800 58px Outfit,system-ui,sans-serif";x.fillText(val,W-170,y+65);x.textAlign="center"};
- row("Schema 1",fmtT(t[0]),470);row("Schema 2",fmtT(t[1]),630);
- x.fillStyle="#6d6b73";x.font="700 44px Inter,system-ui,sans-serif";x.fillText("TOTALE",W/2,860);
+ row(t("p1"),fmtT(tt[0]),470);row(t("p2"),fmtT(tt[1]),630);
+ x.fillStyle="#6d6b73";x.font="700 44px Inter,system-ui,sans-serif";x.fillText(t("total"),W/2,860);
  x.fillStyle="#16161a";x.font="800 190px Outfit,system-ui,sans-serif";x.fillText(fmtT(tot),W/2,1005);
- x.fillStyle="#5a2d9c";x.font="800 64px Outfit,system-ui,sans-serif";x.fillText("Riesci a battermi?",W/2,1200);return c}
-async function shareResult(t,d){const tot=Math.round((t[0]+t[1])*10)/10,text="Tipdoku · Sfida del "+dateLabel(d)+"\nSchema 1: "+fmtT(t[0])+"\nSchema 2: "+fmtT(t[1])+"\nTotale: "+fmtT(tot)+"\nRiesci a battermi? "+location.href;
- let file=null;try{const blob=await new Promise(r=>drawCard(t,d,tot).toBlob(r,"image/png"));file=new File([blob],"tipdoku-sfida-"+d+".png",{type:"image/png"})}catch(e){}
- try{if(file&&navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text,title:"Tipdoku"});return}
-  if(navigator.share){await navigator.share({text,title:"Tipdoku"});return}}catch(e){if(e&&e.name=="AbortError")return}
+ x.fillStyle="#5a2d9c";x.font="800 64px Outfit,system-ui,sans-serif";x.fillText(t("cardCta"),W/2,1200);return c}
+async function shareResult(tt,d){const tot=Math.round((tt[0]+tt[1])*10)/10,text=t("shareText",{d:dateLabel(d),a:fmtT(tt[0]),b:fmtT(tt[1]),c:fmtT(tot),u:location.href});
+ let file=null;try{const blob=await new Promise(r=>drawCard(tt,d,tot).toBlob(r,"image/png"));file=new File([blob],"tipdoku-"+d+".png",{type:"image/png"})}catch(e){}
+ try{if(file&&navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text:text,title:"Tipdoku"});return}
+  if(navigator.share){await navigator.share({text:text,title:"Tipdoku"});return}}catch(e){if(e&&e.name=="AbortError")return}
  let copied=false;try{await navigator.clipboard.writeText(text);copied=true}catch(e){}
  if(file){const a=document.createElement("a");a.href=URL.createObjectURL(file);a.download=file.name;document.body.appendChild(a);a.click();a.remove()}
- const m=$("rsm");if(m)m.textContent=(copied?"Testo copiato negli appunti. ":"")+(file?"Immagine scaricata.":"Condivisione non disponibile su questo dispositivo.")}
+ const m=$("rsm");if(m)m.textContent=(copied?t("copied"):"")+(file?t("imgDl"):t("noShare"))}
 {const done=dRec(dayNo()).t.length>=2;sm=done?"relax":"daily";document.querySelectorAll(".mc").forEach(x=>x.classList.toggle("on",x.dataset.m==sm))}
 document.querySelectorAll("[data-p]").forEach(b=>{b.onclick=()=>setPal(b.dataset.p);b.classList.toggle("on",b.dataset.p==palName)});
+buildLangSelects();applyLang();
 load();
 </script></body></html>
